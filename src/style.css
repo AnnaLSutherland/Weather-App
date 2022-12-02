@@ -113,3 +113,7 @@ p {
   margin: 0;
   font-weight: 300;
 }
+.githubLink {
+  color: black;
+  margin-left: 50px;
+}
