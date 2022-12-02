@@ -30,7 +30,7 @@ body {
 }
 .celc:hover,
 .fahr:hover {
-  color: paleturquoise;
+  color: rgb(209, 70, 122);
   opacity: 0.7;
   text-align: none;
 }
