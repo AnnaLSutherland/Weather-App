@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2a5f47d536.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body app">
+          <div class="row search">
+            <form id="search-city">
+              <input
+                type="search"
+                placeholder="Enter city name"
+                autofocus="on"
+                class="searchEngine"
+                id="search-city-input"
+              />
+              <input
+                type="submit"
+                value="Search"
+                class="button"
+              />
+            </form>
+            <button
+              class="locationButton"
+              id="location-button"
+            >
+              Current Location
+            </button>
+          </div>
+          <div class="row today">
+            <div class="col-3">
+              <h5 id="city-name">Aberchirder</h5>
+              <h6 id="current-date"></h6>
+              <h6 id="description">Cloudy</h6>
+            </div>
+            <div class="col-1.5 todayTemp">
+              <i
+                class="fa-sharp fa-solid fa-cloud-sun todayIcon"
+              ></i>
+            </div>
+            <div class="col-1.5 todayTemp">
+              <h2 id="current-temp">20</h2>
+            </div>
+            <div class="col-2 todayTemp">
+              <p>
+                <a href="≈" class="celc" id="celcius">°C</a>
+                |
+                <a href="#" class="fahr" id="fahrenheit"
+                  >°F</a
+                >
+              </p>
+            </div>
+            <div class="col-4 todayData">
+              <h6>
+                Feels Like:
+                <span id="feels-like">20</span>°C
+              </h6>
+              <h6>
+                Humidity:
+                <span id="humidity">2</span>%
+              </h6>
+              <h6>
+                Wind:
+                <span id="wind">15</span> mph
+              </h6>
+            </div>
+          </div>
+          <div class="row forecast">
+            <div class="col-2" id="forecast-day-1">
+              <h4>Fri</h4>
+              <i
+                class="fa-sharp fa-solid fa-cloud-sun forecastIcon"
+              ></i>
+              <h4 class="forecastTemp">5°C</h4>
+            </div>
+            <div class="col-2" id="forecast-day-2">
+              <h4>Sat</h4>
+              <i
+                class="fa-sharp fa-solid fa-cloud-rain forecastIcon"
+              ></i>
+              <h4 class="forecastTemp">6°C</h4>
+            </div>
+            <div class="col-2" id="forecast-day-3">
+              <h4>Sun</h4>
+              <i
+                class="fa-sharp fa-solid fa-cloud forecastIcon"
+              ></i>
+              <h4 class="forecastTemp">7°C</h4>
+            </div>
+            <div class="col-2" id="forecast-day-4">
+              <h4>Mon</h4>
+              <i
+                class="fa-sharp fa-solid fa-cloud forecastIcon"
+              ></i>
+              <h4 class="forecastTemp">8°C</h4>
+            </div>
+            <div class="col-2" id="forecast-day-5">
+              <h4>Tue</h4>
+              <i
+                class="fa-sharp fa-solid fa-cloud-rain forecastIcon"
+              ></i>
+              <h4 class="forecastTemp">9°C</h4>
+            </div>
+            <div class="col-2" id="forecast-day-6">
+              <h4>Wed</h4>
+              <i
+                class="fa-sharp fa-solid fa-sun forecastIcon"
+              ></i>
+              <h4 class="forecastTemp">10°C</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
